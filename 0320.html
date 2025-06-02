@@ -143,6 +143,30 @@
       transform: scale(1.15);
     }
 
+    .react-icon-link {
+      display: inline-block;
+      margin-top: 12px;
+    }
+
+    .react-icon-bg {
+      display: inline-block;
+      background: #282c34;
+      border-radius: 50%;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s;
+    }
+
+    .react-icon-link:hover .react-icon-bg {
+      transform: scale(1.15);
+    }
+
+    .react-icon-img {
+      width: 48px;
+      height: 48px;
+      vertical-align: middle;
+    }
+
     @media (max-width: 600px) {
       nav a {
         display: block;
@@ -206,8 +230,10 @@
   <div class="container react-link">
     <h2>React 專案連結</h2>
     <p>點擊下方圖示以開啟您的 React 專案：</p>
-    <a href="http://localhost:5173/2025-react-app/" target="_blank" title="前往 React 專案">
-      <img src="/2025-react-app/vite.svg" alt="React 專案" />
+    <a href="http://localhost:5173/2025-react-app/" target="_blank" title="前往 React 專案" class="react-icon-link">
+      <span class="react-icon-bg">
+        <img src="https://react.dev/favicon.ico" alt="React 專案" class="react-icon-img" />
+      </span>
     </a>
   </div>
 
