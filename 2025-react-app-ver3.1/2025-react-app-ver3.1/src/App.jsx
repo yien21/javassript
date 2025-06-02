@@ -24,10 +24,9 @@ function App() {
 
       {/* 標題 */}
       <main className="main-content">
-        <h1>5b1g0010 黃翊恩</h1>
+        <h1 className="main-title">5b1g0010 黃翊恩</h1>
 
-        {/* Slider 區塊 */}
-        <section className="slider-section">
+        <section className="card slider-section">
           <h2>我的第一個元件：Slider</h2>
           <div className="sliders">
             <p>R: <MySlider /></p>
@@ -36,20 +35,17 @@ function App() {
           </div>
         </section>
 
-        {/* 色彩面板區塊 */}
-        <section className="panel-section">
+        <section className="card panel-section">
           <h2>第二個元件：RGB色彩面板</h2>
           <MyPanel />
         </section>
 
-        {/* 計算機區塊 */}
-        <section className="calculator-section">
+        <section className="card calculator-section">
           <h2>計算機</h2>
           <MyCalculator />
         </section>
 
-        {/* 計數器區塊 */}
-        <section className="counter-section card">
+        <section className="card counter-section">
           <button onClick={() => setCount(count + 1)}>
             count is {count}
           </button>
