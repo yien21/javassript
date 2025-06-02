@@ -55,12 +55,6 @@ function App() {
         </section>
       </main>
 
-      {/* 教學連結 */}
-      <footer className="footer">
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
-      </footer>
     </>
   );
 }
