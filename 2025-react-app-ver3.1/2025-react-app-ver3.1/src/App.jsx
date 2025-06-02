@@ -6,6 +6,7 @@ import "./App.css";
 import MySlider from "./component/MySlider";
 import MyPanel from "./component/MyPanel";
 import MyCalculator from "./component/MyCalculator";
+import TicTacToe from "./component/TicTacToe"; // 加入 TicTacToe 的正確匯入
 
 function App() {
   const [count, setCount] = useState(0);
@@ -45,8 +46,13 @@ function App() {
           <MyCalculator />
         </section>
 
+        <section className="card calculator-section">
+          <h2>第四個元件：井字遊戲</h2>
+          <TicTacToe />
+        </section>
+
         <section className="card counter-section">
-          <button onClick={() => setCount(count + 1)}>
+          <button onClick={() => setCount((count) => count + 1)}>
             count is {count}
           </button>
           <p>
@@ -54,7 +60,9 @@ function App() {
           </p>
         </section>
       </main>
-
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
   );
 }
