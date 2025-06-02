@@ -46,7 +46,8 @@ function App() {
           <MyCalculator />
         </section>
 
-        <section className="card calculator-section">
+        {/* 這裡可以加上 TicTacToe 區塊 */}
+        <section className="card ttt-section">
           <h2>第四個元件：井字遊戲</h2>
           <TicTacToe />
         </section>
