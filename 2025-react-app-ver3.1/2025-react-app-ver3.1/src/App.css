@@ -1,23 +1,137 @@
-#root {
-  max-width: 1280px;
+/* 主要容器設定 */
+#root, .main-content {
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem 3rem 1rem;
   text-align: center;
+  background: #f6f8fa;
+  min-height: 100vh;
+}
+
+/* 標題區塊 */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  gap: 0.5rem;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 5em;
+  padding: 1em;
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter 300ms, transform 0.2s;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
+  transform: scale(1.08) rotate(-6deg);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.main-title {
+  font-size: 2.5rem;
+  color: #4a90e2;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 1px 2px 8px #e0eaff;
+}
+
+/* 卡片區塊 */
+.card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2em 1.5em;
+  margin: 2em 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(76,144,226,0.15);
+}
+
+section h2 {
+  color: #357abd;
+  margin-bottom: 1em;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+/* Slider 區塊 */
+.sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.slider-label {
+  font-weight: bold;
+  width: 2em;
+  display: inline-block;
+  color: #4a90e2;
+}
+
+/* 計數按鈕 */
+.count-btn {
+  background: linear-gradient(90deg, #4a90e2 60%, #357abd 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  margin-bottom: 1em;
+  box-shadow: 0 2px 8px rgba(76,144,226,0.08);
+}
+.count-btn:hover {
+  background: linear-gradient(90deg, #357abd 60%, #4a90e2 100%);
+  transform: scale(1.07);
+}
+
+/* 井字遊戲區塊可自訂 */
+.ttt-section {
+  background: #f0f7ff;
+}
+
+/* 文件提示 */
+.read-the-docs {
+  color: #888;
+  font-size: 1rem;
+  margin-top: 2em;
+}
+
+/* 響應式設計 */
+@media (max-width: 700px) {
+  #root, .main-content {
+    padding: 1rem 0.2rem;
+  }
+  .card {
+    padding: 1em 0.5em;
+    max-width: 98vw;
+  }
+  .main-title {
+    font-size: 1.3rem;
+  }
+  .header {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+/* logo 旋轉動畫（可用於 React logo） */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -26,49 +140,6 @@
     transform: rotate(360deg);
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  padding: 2em;
-  margin: 2em auto;
-  max-width: 600px;
-  text-align: left;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.main-title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #4a90e2;
-  letter-spacing: 2px;
-}
-
-section h2 {
-  color: #333;
-  margin-bottom: 1em;
-}
-
-.sliders p {
-  margin: 0.5em 0;
-}
-
-@media (max-width: 700px) {
-  .card {
-    padding: 1em;
-    max-width: 95vw;
-  }
-  .main-title {
-    font-size: 1.5rem;
-  }
+.logo.react {
+  animation: logo-spin 20s linear infinite;
 }
