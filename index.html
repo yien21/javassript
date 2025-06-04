@@ -1,14 +1,141 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2025五專三Javascript程式設計:使用react框架</title>
-    <script type="module" crossorigin src="./assets/index-DJNSc9xt.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CanJF1Qf.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+    <title>我的自介 - 黃翊恩</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f4f9fc;
+            color: #333;
+        }
+
+        nav {
+            background-color: #3498db;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f1c40f;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .info-table td {
+            vertical-align: top;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        ul {
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+
+        h4 {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin-right: 20px;
+            display: inline-block;
+            background-image: url('your-photo.jpg'); /* 放你的照片連結 */
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .info-table {
+                display: block;
+            }
+
+            .avatar {
+                margin: 0 auto 20px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="./0604.html">首頁</a>
+        <a href="./about.html">關於我</a>
+        <a href="./research.html">研究</a>
+        <a href="./0320.html">作業</a>
+    </nav>
+
+    <div class="container">
+        <h3>黃翊恩</h3>
+        <table class="info-table">
+            <tr>
+                <td>
+                    <div class="avatar"></div>
+                </td>
+                <td>
+                    <ul>
+                        <li>南臺科技大學 資訊工程系 學生</li>
+                        <li>Email：<a href="mailto:5b1g0010@stust.edu.tw">5b1g0010@stust.edu.tw</a></li>
+                        <li>熱愛程式設計、人工智慧與軟體開發</li>
+                        <li>目前專注於網頁技術與應用研究</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <h4>學歷</h4>
+        <ul>
+            <li>白河國中</li>
+            <li>南臺科技大學 資訊工程系</li>
+        </ul>
+    </div>
+</body>
+
 </html>
