@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Javascript作業</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header,
+    h1,
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-top: 0;
+    }
+
+    nav {
+      background-color: #4a90e2;
+      padding: 12px 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    nav a {
+      margin: 0 18px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      flex: 1;
+      min-width: 180px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    input[type="button"] {
+      padding: 10px 20px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="button"]:hover {
+      background-color: #357abd;
+    }
+
+    #myId {
+      margin-top: 25px;
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #fafafa;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #ddd;
+    }
+
+    td {
+      padding: 12px;
+      font-size: 14px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .react-link {
+      text-align: center;
+    }
+
+    .react-link a {
+      text-decoration: none;
+    }
+
+    .react-link img {
+      width: 64px;
+      height: 64px;
+      vertical-align: middle;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s;
+    }
+
+    .react-link img:hover {
+      transform: scale(1.15);
+    }
+
+    .react-icon-link {
+      display: inline-block;
+      margin-top: 12px;
+    }
+
+    .react-icon-bg {
+      display: inline-block;
+      background: #282c34;
+      border-radius: 50%;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s;
+    }
+
+    .react-icon-link:hover .react-icon-bg {
+      transform: scale(1.15);
+    }
+
+    .react-icon-img {
+      width: 48px;
+      height: 48px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      .input-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spin {
+      animation: spin 2s linear infinite;
+    }
+  </style>
+
+  <script>
+    function myFunction() {
+      var n = document.getElementById('numberInput').value;
+      if (n === "" || n <= 0) {
+        alert("請輸入一個大於 0 的數值");
+        return;
+      }
+
+      var str = "<table>";
+      for (let i = 1; i <= n; i++) {
+        str += "<tr>";
+        for (let j = 1; j <= n; j++) {
+          str += `<td>${i} × ${j} = ${i * j}</td>`;
+        }
+        str += "</tr>";
+      }
+      str += "</table>";
+
+      document.getElementById("myId").innerHTML = str;
+    }
+  </script>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="about.html">關於我</a>
+    <a href="research.html">研究</a>
+    <a href="homework.html">作業</a>
+  </nav>
+
+  <div class="container">
+    <h1>N × N 乘法表</h1>
+    <label for="numberInput">輸入一個數值:</label>
+    <div class="input-group">
+      <input type="number" id="numberInput" placeholder="例如：5" />
+      <input type="button" value="產生表格" onclick="myFunction()" />
+    </div>
+    <div id="myId"></div>
+  </div>
+
+  <div class="container">
+    <h2>Water Puzzle 小遊戲</h2>
+    <iframe src="WaterPuzzle/WaterPuzzle.html"></iframe>
+  </div>
+
+  <div class="container react-link">
+    <h2>React 專案連結</h2>
+    <p>點擊下方圖示以開啟您的 React 專案：</p>
+    <a href="http://localhost:5173/2025-react-app/" target="_blank" title="前往 React 專案" class="react-icon-link">
+      <span class="react-icon-bg">
+        <img src="https://react.dev/favicon.ico" alt="React 專案" class="react-icon-img spin" />
+      </span>
+    </a>
+  </div>
+
+  
+  </script>
+
+</body>
+
+</html>
